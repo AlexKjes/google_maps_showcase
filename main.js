@@ -119,7 +119,7 @@ function multipointMoveDrone(){
 function weedAdder(pos){
 
   for (let i=0;i<undiscoveredWeed.length;i++){
-    if ((Math.abs(pos.x-undiscoveredWeed[i].x)+Math.abs(pos.y-undiscoveredWeed[i].y) < 1e-4)){
+    if ((Math.abs(pos.x-undiscoveredWeed[i].x)+Math.abs(pos.y-undiscoveredWeed[i].y) < 1.5e-4)){
       dp = undiscoveredWeed.splice(i, i+1)[0];
       //console.log(new google.maps.LatLng(dp.x, dp.y).lat());
       discoveredWeed.push(new google.maps.LatLng(dp.x, dp.y));
